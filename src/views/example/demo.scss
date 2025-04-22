@@ -1,0 +1,29 @@
+.list-todo-container{
+
+     .add-todo{
+           .add{
+           margin: 0 10px;
+
+           }
+
+     }
+    .list-element-todo{
+        border-bottom:1px solid gray  ;
+        margin: 10px;
+        height: 40px;
+        
+        }
+        .list-todo-content{
+         margin:0 auto;
+        width: 400px;
+        
+        }
+        .delete{
+            margin:0 10px;
+        }
+        .edit{
+
+            margin:0 10px
+        }
+
+}
