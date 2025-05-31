@@ -1,12 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './views/App';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './styles/global.scss';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import rootReducers from './views/Strore/reducers/rootReducers';
+import User from './components/User/User';
+import Admin from './components/Admin/Admin';
+import 'bootstrap/dist/css/bootstrap.css';
+// Put any other imports below so that CSS from your
+// components takes precedence over default styles.
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
+
   <React.StrictMode>
-    <App />
+
+    <BrowserRouter>
+    <App/>
+      <Routes>
+        <Route path='/' element={<App/>}></Route>
+        <Route path='/user' element={<User/>}></Route>
+        <Route path='/admin' element={<Admin/>}></Route>
+
+      </Routes>
+    </BrowserRouter>
+
   </React.StrictMode>
 );
 
