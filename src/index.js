@@ -8,7 +8,10 @@ import { Provider } from 'react-redux';
 import rootReducers from './views/Strore/reducers/rootReducers';
 import User from './components/User/User';
 import Admin from './components/Admin/Admin';
+import HomePage from './components/Home/HomePage';
 import 'bootstrap/dist/css/bootstrap.css';
+import ManagerUser from './components/Admin/Content/ManagerUser';
+import Dashboard from './components/Admin/Content/Dashboard';
 // Put any other imports below so that CSS from your
 // components takes precedence over default styles.
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,10 +22,16 @@ root.render(
 
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<App/>}>
-                <Route path='/user' element={<User/>}></Route>
-        <Route path='/admin' element={<Admin/>}></Route>
-        
+        <Route path='/' element={<App />}>
+          <Route index element={<HomePage />}></Route>
+          <Route path='/user' element={<User />}></Route>
+        </Route>
+
+        <Route path='/admin' element={<Admin />}>
+          <Route path='dashboard'index element={<Dashboard />}></Route>
+
+          <Route path='manager-users' element={<ManagerUser />}></Route>
+
         </Route>
 
 

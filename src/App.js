@@ -12,16 +12,16 @@ function App() {
 
       <div className='main-container'>
         <div className='sidenav-Container'>
-
-
+          {/* phan chua side bar */}
         </div>
-      </div>
-       
-      <div className='app-content'>
-           <Outlet/>
+        <div className='app-content'>
+          <Outlet />
+        </div>
+
       </div>
 
-      
+
+
     </div>
 
 

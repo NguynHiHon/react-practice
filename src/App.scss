@@ -1,6 +1,98 @@
-body{
-padding: 0;
-margin: 0;
+body {
+    padding: 0;
+    margin: 0;
 
 
 }
+
+@media(min-width:1350px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1800px !important;
+    }
+}
+
+.app-container {
+
+    .header-container {
+        .btn-login {
+            height: 40px;
+            border-radius: 5px;
+            margin-right: 15px;
+            padding: 0 15px;
+            border: 1px solid #535353;
+        }
+
+        .btn-sign-up {
+            height: 40px;
+            border-radius: 5px;
+            background: #535353;
+            color: wheat;
+            padding: 0 15px solid #535353;
+
+            &:hover {
+                background: white;
+                color: gray;
+
+            }
+        }
+
+        .navbar {
+            padding-top: 10px;
+            z-index: 10;
+            background-color: rgba(0, 0, 0, 0) !important;
+
+            .nav-link {
+                &.active {
+                    color: #00bfff;
+                }
+            }
+        }
+    }
+
+    .homepage-container {
+
+        .homepage-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 100px;
+            position: relative;
+
+            width: 50%;
+
+            .title1 {
+                font-size: 45px;
+                font-weight: 600;
+            }
+
+            .title2 {
+                font-size: 25px;
+
+            }
+
+            .title3 {
+                button {
+                    border-radius: 5px;
+                    height: 40px;
+background: black;
+color: antiquewhite;
+                }
+
+            }
+        }
+
+    }
+}
+
+video {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+.homepage-content {}
